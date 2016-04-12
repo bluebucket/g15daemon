@@ -1409,7 +1409,7 @@ int main(int argc, char **argv)
 
 	memset(configDir,0,sizeof(configDir));
 	strncpy(configDir,getenv("HOME"),1024);
-	strncat(configDir,"/.g15macro/",1024-strlen(configDir));
+	strncat(configDir,"/.config/g15macro/",1024-strlen(configDir));
 
     strncpy(configpath,getenv("HOME"),1024);
 
@@ -1534,7 +1534,7 @@ int main(int argc, char **argv)
 
     /* new format */
     strncpy(configpath,getenv("HOME"),1024);
-    strncat(configpath,"/.g15macro",1024-strlen(configpath));
+    strncat(configpath,"/.config/g15macro",1024-strlen(configpath));
     mkdir(configpath,0777);
     strncat(configpath,"/g15macro.conf",1024-strlen(configpath));
     config=fopen(configpath,"a");
