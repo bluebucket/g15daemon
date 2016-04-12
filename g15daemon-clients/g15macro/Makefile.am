@@ -10,9 +10,8 @@ doc_DATA = README ChangeLog AUTHORS NEWS COPYING
 imagedir = $(prefix)/share/g15macro/splash
 image_DATA = ${top_builddir}/g15macro.wbmp
 
-LIBS = -lg15daemon_client -lg15render -lX11 -lXtst 
+LIBS = -lg15daemon_client -lg15render -lX11 -lXtst -lpthread -lm
 IMCLUDES = -I
-g15macro_LDFLAGS = -avoid-version
 g15macro_SOURCES =  g15macro.c fileHandling.c
 
 
